@@ -1,0 +1,97 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.Canvas?>
+
+<BorderPane fx:controller="com.jacek.Controller" xmlns:fx="http://javafx.com/fxml">
+
+    <BorderPane.margin>
+        <Insets bottom="25.0" left="25.0" right="25.0" />
+    </BorderPane.margin>
+
+    <top>
+        <GridPane alignment="TOP_CENTER" hgap="20" vgap="10">
+
+            <BorderPane.margin>
+                <Insets bottom="15.0" left="25.0" right="25.0" top="10.0" />
+            </BorderPane.margin>
+
+            <GridPane alignment="BASELINE_LEFT" hgap="305" vgap="10"
+                GridPane.columnIndex="0" GridPane.rowIndex="0">
+
+                <Label text="Input:"
+                       GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+                <Button text="Encode"
+                        onAction="#handleEncodeButtonAction"
+                        GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            </GridPane>
+
+            <TextArea fx:id="inputText"
+                    GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+            <GridPane alignment="BASELINE_LEFT" hgap="250" vgap="10"
+                      GridPane.columnIndex="1" GridPane.rowIndex="0">
+
+                <Label text="Encoded text:"
+                       GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+                <Button text="Decode"
+                        onAction="#handleDecodeButtonAction"
+                        GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            </GridPane>
+
+            <TextArea fx:id="encodedText"
+                    GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        </GridPane>
+
+    </top>
+
+    <center>
+
+            <ScrollPane  pannable="true">
+
+                <BorderPane.margin>
+                    <Insets bottom="20.0" left="25.0" right="25.0" top="10" />
+                </BorderPane.margin>
+
+                <FlowPane>
+
+                    <Canvas fx:id="canvas" width="8000" height="8000">
+
+                    </Canvas>
+
+                </FlowPane>
+
+            </ScrollPane>
+
+    </center>
+
+    <bottom>
+
+        <GridPane alignment="TOP_CENTER" hgap="10" vgap="10">
+
+            <BorderPane.margin>
+                <Insets bottom="25.0" left="25.0" right="25.0" />
+            </BorderPane.margin>
+
+            <Label text="Entropy:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+            <Label fx:id="entropy"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="Average codeword:"
+                   GridPane.columnIndex="5" GridPane.rowIndex="0"/>
+
+            <Label fx:id="averageCodeword"
+                   GridPane.columnIndex="6" GridPane.rowIndex="0"/>
+
+        </GridPane>
+
+    </bottom>
+
+</BorderPane>
