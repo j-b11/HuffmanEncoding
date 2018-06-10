@@ -82,6 +82,7 @@ public class HuffmanTree {
         return entropyValue;
     }
 
+
     double computeAverageCodewordLength(HashMap<Character, String> map, String inputText){
         double average = 0;
 

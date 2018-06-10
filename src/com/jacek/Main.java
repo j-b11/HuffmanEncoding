@@ -14,11 +14,9 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main_user_interface.fxml"));
         Parent root = fxmlLoader.load();
 
-        Controller controller = fxmlLoader.getController();
-
         Scene scene = new Scene(root, 900, 600);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Kodowanie Huffmana");
+        primaryStage.setTitle("Huffman Encoding");
 
         primaryStage.show();
     }
